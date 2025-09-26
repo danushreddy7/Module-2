@@ -24,32 +24,23 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 ```
 ## 🧪 Program:
 ```
-def generate_pascals_triangle(n):
-    triangle = []  # Initialize empty list to store rows
-    for i in range(n):
-        row = [1]  # First element of each row is 1
-        if triangle:  # From the second row onwards
-            last_row = triangle[-1]
-            row.extend([last_row[j] + last_row[j + 1] for j in range(len(last_row) - 1)])
-            row.append(1)  # Last element is also 1
-        triangle.append(row)
-    return triangle
-num_rows = int(input())
-triangle = generate_pascals_triangle(num_rows)
-for row in triangle:
-    print(' '.join(map(str, row)))
+rows = int(input())
+coef = 1
+
+for i in range(1, rows+1):
+    for space in range(1, rows-i+1):
+        print(" ",end="")
+    for j in range(0, i):
+        if j==0 or i==0:
+            coef = 1
+        else:
+            coef = coef * (i - j)//j
+        print(coef, end = " ")
+    print()
 ```
 ## Output:
-```
-    Input            Result
-      5                5
-                       1
-                       1 1
-                       1 2 1
-                       1 3 3 1
-                       1 4 6 4 1
+<img width="631" height="694" alt="486028987-ec562020-6f65-48f8-9cfe-45c4f0bbf1b2" src="https://github.com/user-attachments/assets/84ec08c9-696b-41f6-b567-ce6ea87dea2e" />
 
-```
 ## Result:
 The program for pascal triangle was successful.
 
