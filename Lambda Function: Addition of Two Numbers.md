@@ -10,18 +10,17 @@ To write a Python program that defines a **lambda function** which takes two arg
 
 ## 🧾 Program:
 ```
-sum_lambda = lambda a, b: a + b
-a = int(input())
-b = int(input())
-result = sum_lambda(a, b)
-print(f"The sum of {a} and {b} is {result}")
+i=int(input())
+j=int(input())
+z=int(input())
+
+f = lambda a, b,c: a+b+c
+
+print(f(i, j,z))
 ```
 ## Output:
-```
-  Input             Result
-  
-   10           The sum of 10 and 5 is 15
-   5
-```
+<img width="495" height="377" alt="486026426-b48e7c05-ef44-4746-a37f-8cd72624b44f" src="https://github.com/user-attachments/assets/9421a226-b79c-4743-9c9e-c7f0af0ad21f" />
+
+
 ## Result:
 The program of lambda function sum of two values was successful.
